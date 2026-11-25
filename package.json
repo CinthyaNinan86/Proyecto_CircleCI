@@ -1,0 +1,12 @@
+{
+  "name": "proyecto-circleci",
+  "version": "1.0.0",
+  "description": "Proyecto de integracion continua",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
