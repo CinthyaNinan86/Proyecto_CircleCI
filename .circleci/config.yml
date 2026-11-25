@@ -1,0 +1,23 @@
+
+version: 2.1
+
+jobs:
+  pruebas:
+    docker:
+      - image: cimg/node:20.18
+
+    steps:
+      - checkout
+
+      - run:
+          name: Instalar dependencias
+          command: npm ci
+
+      - run:
+          name: Ejecutar pruebas unitarias
+          command: npm test
+
+workflows:
+  pruebas-automaticas:
+    jobs:
+      - pruebas
